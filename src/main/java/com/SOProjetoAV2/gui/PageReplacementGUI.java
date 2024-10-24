@@ -1,9 +1,9 @@
 package main.java.com.SOProjetoAV2.gui;
 
-import main.java.com.SOProjetoAV2.PageReplacementFactory;
-import main.java.com.SOProjetoAV2.PageReplacementType;
-import main.java.com.SOProjetoAV2.PageReplacementSimulator;
-import main.java.com.SOProjetoAV2.PageReplacementAlgorithm;
+import main.java.com.SOProjetoAV2.SimuladorFactory;
+import main.java.com.SOProjetoAV2.SimuladorType;
+import main.java.com.SOProjetoAV2.Simulador;
+import main.java.com.SOProjetoAV2.SimuladorAlgorithm;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
@@ -80,10 +80,10 @@ public class PageReplacementGUI extends JFrame {
             List<Integer> pageSequence = parsePageSequence(pageSequenceField.getText());
 
             DefaultCategoryDataset dataset = new DefaultCategoryDataset();
-            PageReplacementSimulator simulator = new PageReplacementSimulator(pageSequence, frameCount);
+            Simulador simulator = new Simulador(pageSequence, frameCount);
 
-            for (PageReplacementType algorithmType : PageReplacementType.values()) {
-                PageReplacementAlgorithm algorithm = PageReplacementFactory.getAlgorithm(algorithmType);
+            for (SimuladorType algorithmType : SimuladorType.values()) {
+                SimuladorAlgorithm algorithm = SimuladorFactory.getAlgorithm(algorithmType);
                 int pageFaults = algorithm.execute(pageSequence, frameCount);
                 dataset.addValue(pageFaults, "Page Faults", algorithmType.toString());
             }

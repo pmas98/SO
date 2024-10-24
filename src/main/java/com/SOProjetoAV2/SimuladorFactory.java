@@ -2,15 +2,15 @@ package main.java.com.SOProjetoAV2;
 
 import main.java.com.SOProjetoAV2.algorithms.*;
 
-public class PageReplacementFactory {
-    public static PageReplacementAlgorithm getAlgorithm(PageReplacementType type) {
+public class SimuladorFactory {
+    public static SimuladorAlgorithm getAlgorithm(SimuladorType type) {
         switch (type) {
             case FIFO:
                 return new FIFOAlgorithm();
             case LRU:
                 return new LRUAlgorithm();
             case OPTIMAL:
-                return new OptimalAlgorithm();
+                return new NFUAlgorithm();
             case CLOCK:
                 return new ClockAlgorithm();
             default:
