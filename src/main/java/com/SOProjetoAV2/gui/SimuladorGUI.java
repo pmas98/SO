@@ -14,14 +14,14 @@ import java.awt.*;
 import java.util.Arrays;
 import java.util.List;
 
-public class PageReplacementGUI extends JFrame {
+public class SimuladorGUI extends JFrame {
 
     private JTextField frameCountField;
     private JTextField pageSequenceField;
     private JButton simulateButton;
     private JPanel chartPanel;
 
-    public PageReplacementGUI() {
+    public SimuladorGUI() {
         setTitle("Page Replacement Simulator");
         setSize(1000, 700);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -128,7 +128,7 @@ public class PageReplacementGUI extends JFrame {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            PageReplacementGUI gui = new PageReplacementGUI();
+            SimuladorGUI gui = new SimuladorGUI();
             gui.setVisible(true);
         });
     }
