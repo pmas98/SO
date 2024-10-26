@@ -23,12 +23,27 @@ public class Simulador {
         Random random = new Random();
         List<Integer> pageSequence = new ArrayList<>();
 
+//        CASO 1
+//        int[] favoritePages = new int[5];
+//        for(int i = 0; i < favoritePages.length; i++) {
+//            favoritePages[i] = random.nextInt(maxPageNumber);
+//        }
+
+//        for(int i = 0; i < sequenceSize; i++) {
+//            if(random.nextDouble() < 0.7) { // 70% chance de usar página favorita
+//                pageSequence.add(favoritePages[random.nextInt(favoritePages.length)]);
+//            } else { // 30% chance de página aleatória
+//                pageSequence.add(random.nextInt(maxPageNumber));
+//            }
+//        }
+
+//         Inserindo Manualmente
+//        pageSequence = Arrays.asList(7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 1, 2, 3, 0, 1, 7, 0, 1, 4, 2, 1, 5);
+
+        // CASO 2
         for (int i = 0; i < sequenceSize; i++) {
             pageSequence.add(random.nextInt(maxPageNumber));
         }
-
-        // Inserindo Manualmente
-        // pageSequence = Arrays.asList(7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 1, 2, 3, 0, 1, 7, 0, 1, 4, 2, 1, 5);
 
         int frameCount = 10;
 
