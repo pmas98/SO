@@ -9,7 +9,7 @@ public class SimuladorFactory {
                 return new FIFOAlgorithm();
             case LRU:
                 return new LRUAlgorithm();
-            case OPTIMAL:
+            case NFU:
                 return new NFUAlgorithm();
             case CLOCK:
                 return new ClockAlgorithm();

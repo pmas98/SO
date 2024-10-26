@@ -50,7 +50,7 @@ public class Simulador {
         Simulador simulation = new Simulador(pageSequence, frameCount);
         simulation.simulate(SimuladorFactory.getAlgorithm(SimuladorType.FIFO));
         simulation.simulate(SimuladorFactory.getAlgorithm(SimuladorType.LRU));
-        simulation.simulate(SimuladorFactory.getAlgorithm(SimuladorType.OPTIMAL));
+        simulation.simulate(SimuladorFactory.getAlgorithm(SimuladorType.NFU));
         simulation.simulate(SimuladorFactory.getAlgorithm(SimuladorType.CLOCK));
     }
 }
