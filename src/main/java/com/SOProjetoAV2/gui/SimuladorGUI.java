@@ -36,14 +36,14 @@ public class SimuladorGUI extends JFrame {
         gbc.anchor = GridBagConstraints.WEST;
         gbc.insets = new Insets(5, 5, 5, 5);
 
-        // Frame count field
+        
         controlPanel.add(new JLabel("Quantidade de frames:"), gbc);
         gbc.gridx++;
         frameCountField = new JTextField(10);
         frameCountField.setText("3");
         controlPanel.add(frameCountField, gbc);
 
-        // Page sequence field
+        
         gbc.gridx = 0;
         gbc.gridy++;
         controlPanel.add(new JLabel("Sequência de páginas (divididas por vírgula):"), gbc);
@@ -52,7 +52,7 @@ public class SimuladorGUI extends JFrame {
         pageSequenceField.setText("7,0,1,2,0,3,0,4,2,3,0,3,2,1,2,0,1,7,0,1");
         controlPanel.add(pageSequenceField, gbc);
 
-        // Simulate button
+        
         gbc.gridx = 0;
         gbc.gridy++;
         gbc.gridwidth = 2;
@@ -65,12 +65,12 @@ public class SimuladorGUI extends JFrame {
 
         add(controlPanel, BorderLayout.NORTH);
 
-        // Chart panel
+        
         chartPanel = new JPanel(new BorderLayout());
         chartPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         add(chartPanel, BorderLayout.CENTER);
 
-        // Button listener
+        
         simulateButton.addActionListener(e -> runSimulation());
     }
 
