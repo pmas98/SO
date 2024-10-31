@@ -6,8 +6,6 @@ import java.util.*;
 
 public class LRUAlgorithm implements SimuladorAlgorithm {
 
-    // This method implements the LRU (Least Recently Used) page replacement algorithm.
-    // It takes a sequence of page requests (pageSequence) and the number of available memory frames (frameCount).
     @Override
     public int execute(List<Integer> pageSequence, int frameCount) {
         LinkedHashSet<Integer> frames = new LinkedHashSet<>();
